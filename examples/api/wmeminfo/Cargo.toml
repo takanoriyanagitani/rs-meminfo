@@ -1,0 +1,45 @@
+[package]
+name = "wmeminfo"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+
+[dependencies.rs-meminfo]
+path = "../../.."
+
+[dependencies.tokio]
+version = "1.45.1"
+default-features = false
+features = [
+  "macros",
+  "rt-multi-thread",
+  "sync",
+]
+
+[dependencies.async-trait]
+version = "0.1.88"
+default-features = false
+features = [
+]
+
+[dependencies.axum]
+version = "0.8.4"
+default-features = false
+features = [
+	"json",
+	"http1",
+	"tokio",
+]
+
+[dependencies.serde]
+version = "1.0.219"
+default-features = false
+features = [
+	"std",
+	"derive",
+]
