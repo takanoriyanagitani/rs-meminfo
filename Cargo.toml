@@ -1,0 +1,25 @@
+[package]
+name = "rs-meminfo"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+
+[dependencies.sysinfo]
+version = "0.35.2"
+default-features = false
+features = [
+	"system",
+]
+
+[dependencies.serde]
+version = "1.0.219"
+default-features = false
+features = [
+	"std",
+	"derive",
+]
